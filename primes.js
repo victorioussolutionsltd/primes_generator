@@ -1,4 +1,8 @@
 export const isPrime = (number) => {
+    if (!Number.isInteger(number)){
+        return false;
+    }
+
 
     if (number===2){
         return true;
