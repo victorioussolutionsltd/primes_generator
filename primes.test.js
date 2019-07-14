@@ -18,4 +18,13 @@ describe('Checking whether function detects non-prime number', ()=>{
     it('Shall not return true for non-integer', ()=>{
         expect(isPrime(2.3)).toBe(false);
     })
+
+    it('Shall return false for number smaller than 2', ()=> {
+        const numbersBelow2 = [1, 0, -1];
+
+        numbersBelow2.forEach(item => {
+            expect(isPrime(item)).toBe(false);
+        })
+    })
+
 })
