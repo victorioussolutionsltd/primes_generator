@@ -11,3 +11,11 @@ describe('Validation for they array of numbers', ()=>{
         }
     )})
 })
+
+
+describe('Checking whether function detects non-prime number', ()=>{
+    
+    it('Shall not return true for non-integer number', ()=>{
+        expect(isPrime(2.3)).toBe(false);
+    })
+})
