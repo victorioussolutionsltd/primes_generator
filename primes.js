@@ -1,8 +1,7 @@
 export const isPrime = (number) => {
-    if (!Number.isInteger(number)){
+    if (!Number.isInteger(number) || number < 2){
         return false;
     }
-
 
     if (number===2){
         return true;
