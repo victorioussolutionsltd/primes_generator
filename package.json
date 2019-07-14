@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "An application that takes numeric input (N) from a user and outputs a multiplication table of (N) prime numbers.",
   "main": "index.js",
+  "scripts": {
+    "start": "node -r esm index.js",
+    "test": "jest"
+  },
   "repository": "https://github.com/victorioussolutionsltd/primes_generator.git",
   "author": "Piotr Malecki",
   "license": "MIT",
