@@ -1,19 +1,19 @@
 # primes_generator
 
 After checking out the repository, please run:
-  yarn install
+yarn install
 
 
 
-Running the application when 20 is number of prime numbers to use in the table:
-  yarn start 20
+Running the application with given numeric N input:
+yarn start 20
   
 
 
 Running tests:
-  yarn test
+yarn test
 
 
 
 Running tests with coverage:
-  yarn test --coverage
+yarn test --coverage
