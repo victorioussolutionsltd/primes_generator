@@ -47,5 +47,6 @@ export const arrayOfPrimeNumbersUnderLimit = (limit) => {
 }
 
 export const getArrayOfNPrimeNumbers = (n) => {
-    return [];
+    const limit = 10*1000*1000;
+    return arrayOfPrimeNumbersUnderLimit(limit).slice(0, n);
 }
