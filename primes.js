@@ -33,3 +33,7 @@ export const getExtendedEratosthenesArrayForRangeUnder = (n) => {
     
     return array;
 }
+
+export const arrayOfPrimeNumbersUnderLimit = (limit) => {
+    return [];
+}

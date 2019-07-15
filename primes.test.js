@@ -1,4 +1,4 @@
-import { isPrime, getExtendedEratosthenesArrayForRangeUnder } from './primes';
+import { isPrime, getExtendedEratosthenesArrayForRangeUnder, arrayOfPrimeNumbersUnderLimit } from './primes';
 
 
 describe('Validation for they array of numbers', ()=>{
@@ -55,5 +55,12 @@ describe('Creating extended Eratosthenes array with first element (number 1) mar
         
         expect(modifiedArray).toEqual(expectedArray);
         
+    })
+})
+
+describe('Get primes up to', () => {
+    it('Shall return array of primes below the given number', () => {
+        const expectedPrimes = [2, 3, 5, 7, 11, 13, 17];
+        expect(arrayOfPrimeNumbersUnderLimit(18)).toEqual(expectedPrimes);
     })
 })
