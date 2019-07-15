@@ -18,5 +18,18 @@ export const isPrime = (number) => {
 }
 
 export const getExtendedEratosthenesArrayForRangeUnder = (n) => {
-    return [];
+
+    const array = new Array(n).fill(true);
+    const upperLimit = Math.sqrt(n);
+
+    for (var i = 2; i <= upperLimit; i++) {
+        if (array[i]) {
+            for (var j = i * i; j < n; j += i) {
+                array[j] = false;
+            }
+        }
+    }
+
+    
+    return array;
 }
