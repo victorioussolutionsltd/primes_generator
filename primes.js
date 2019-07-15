@@ -32,24 +32,41 @@ export const getExtendedEratosthenesArrayForRangeUnder = (n) => {
     return array;
 }
 
-export const arrayOfPrimeNumbersUnderLimit = (limit) => {
-    const primes = [];
-    const allNumbers = getExtendedEratosthenesArrayForRangeUnder(limit);
-    for (var i = 2; i < limit; i++) {
-        if(allNumbers[i]) {
-            primes.push(i);
-        }
+export const arrayOfPrimeNumbersUnderLimit = limit => {
+  const primes = [];
+  const allNumbers = getExtendedEratosthenesArrayForRangeUnder(limit);
+  for (var i = 2; i < limit; i++) {
+    if (allNumbers[i]) {
+      primes.push(i);
     }
+  }
 
-    return primes;
-}
+  return primes;
+};
 
-export const getArrayOfNPrimeNumbers = (n) => {
-    const limit = 10*1000*1000;
-    return arrayOfPrimeNumbersUnderLimit(limit).slice(0, n);
-}
+export const getArrayOfNPrimeNumbers = n => {
+  const limit = 10 * 1000 * 1000;
+  return arrayOfPrimeNumbersUnderLimit(limit).slice(0, n);
+};
 
-export const multiplicationTable = (n) => {    
-    const array = [];
-    return array;
-}
+export const multiplicationTable = n => {
+  const allPrimeNumbers = getArrayOfNPrimeNumbers(n);
+
+  if (allPrimeNumbers.length === 0){
+      return null;
+  }
+
+  let firstArray = [''].concat(allPrimeNumbers);
+  let multipliedPrimeNumbers = [firstArray];
+
+  allPrimeNumbers.forEach( primeNumber => {
+      let newRow = [primeNumber];
+      allPrimeNumbers.forEach( primeToMultiply => {
+          newRow.push(primeNumber * primeToMultiply);
+      });
+
+      multipliedPrimeNumbers.push(newRow);
+  });
+
+  return multipliedPrimeNumbers;
+};
