@@ -35,5 +35,13 @@ export const getExtendedEratosthenesArrayForRangeUnder = (n) => {
 }
 
 export const arrayOfPrimeNumbersUnderLimit = (limit) => {
-    return [];
+    const primes = [];
+    const allNumbers = getExtendedEratosthenesArrayForRangeUnder(limit);
+    for (var i = 2; i < limit; i++) {
+        if(allNumbers[i]) {
+            primes.push(i);
+        }
+    }
+
+    return primes;
 }
