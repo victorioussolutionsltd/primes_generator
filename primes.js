@@ -78,7 +78,24 @@ export const getStringPrimeMultiplicationTableFromArrays = arrays => {
 
       let gridTable = "";
 
-
+      const idx = arrays.length - 1;
+      const space = arrays[idx][idx].toString().length + 1;
+  
+      arrays.forEach(array => {
+        let row = '';
+        array.forEach( cell => {
+          if (cell === null) {
+            row = row.concat(' '.repeat(space));
+          } else {
+            row = row.concat('| ');
+            const cellLength = cell.toString().length;
+            row = row.concat(' '.repeat(space - cellLength));
+            row = row.concat(cell.toString());
+          }
+        });
+        gridTable = gridTable+ row + "|\n";
+      });
+      
 
       return gridTable;
 }
