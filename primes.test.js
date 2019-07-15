@@ -100,7 +100,7 @@ describe("Get multiplication table for prime numbers", () => {
 
 describe('Display the table as string', ()=>{
     it('Shall transform the array into grid (string)', () => {
-        const stringGrid = "| | 2| 3| 5|\n| 2| 4| 6| 10|\n| 3| 6| 9| 15|\n| 5| 10| 15| 25|";
+        const stringGrid = "|    |   2|   3|   5|\n|   2|   4|   6|  10|\n|   3|   6|   9|  15|\n|   5|  10|  15|  25|";
                                 
         const result = getStringPrimeMultiplicationTableFromArrays(multiplicationTable(3));
         expect(result).toMatch(stringGrid);
