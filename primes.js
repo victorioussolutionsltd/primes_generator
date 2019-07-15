@@ -45,3 +45,7 @@ export const arrayOfPrimeNumbersUnderLimit = (limit) => {
 
     return primes;
 }
+
+export const getArrayOfNPrimeNumbers = (n) => {
+    return [];
+}

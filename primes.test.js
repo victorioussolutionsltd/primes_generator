@@ -1,4 +1,9 @@
-import { isPrime, getExtendedEratosthenesArrayForRangeUnder, arrayOfPrimeNumbersUnderLimit } from './primes';
+import {
+  isPrime,
+  getExtendedEratosthenesArrayForRangeUnder,
+  arrayOfPrimeNumbersUnderLimit,
+  getArrayOfNPrimeNumbers
+} from "./primes";
 
 
 describe('Validation for they array of numbers', ()=>{
@@ -71,5 +76,13 @@ describe('Getting prime numbers within the range 0 to 1000', () => {
         primeNumbers.forEach( item => {
             expect(isPrime(item)).toBe(true);
         })
+    })
+})
+
+
+describe('Get N prime numbers', () => {
+    it('Get up to 20000 prime numbers', () => {
+        const primeNumbers =  getArrayOfNPrimeNumbers(20000);
+        expect(primeNumbers.length).toBe(20000);
     })
 })
