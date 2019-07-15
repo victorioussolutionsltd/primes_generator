@@ -2,7 +2,8 @@ import {
   isPrime,
   getExtendedEratosthenesArrayForRangeUnder,
   arrayOfPrimeNumbersUnderLimit,
-  getArrayOfNPrimeNumbers
+  getArrayOfNPrimeNumbers,
+  multiplicationTable
 } from "./primes";
 
 
@@ -84,5 +85,19 @@ describe('Get N prime numbers', () => {
     it('Get up to 20000 prime numbers', () => {
         const primeNumbers =  getArrayOfNPrimeNumbers(20000);
         expect(primeNumbers.length).toBe(20000);
+    })
+})
+
+describe('Get multiplication table for prime numbers', () => {
+    it ('Shall return two dimensional array for N =3 of 14 elements', () => {
+        const expectedMultiplicationTable = [
+            ['', 2, 3, 5 ],
+            [ 2, 4, 6, 10],
+            [ 3, 6, 9, 15],
+            [ 5, 10, 15, 25]
+    ];
+
+    expect(multiplicationTable(3)).toEqual(expectedMultiplicationTable);
+
     })
 })

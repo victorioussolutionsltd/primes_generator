@@ -48,3 +48,8 @@ export const getArrayOfNPrimeNumbers = (n) => {
     const limit = 10*1000*1000;
     return arrayOfPrimeNumbersUnderLimit(limit).slice(0, n);
 }
+
+export const multiplicationTable = (n) => {    
+    const array = [];
+    return array;
+}
