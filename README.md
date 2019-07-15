@@ -5,7 +5,7 @@ yarn install
 
 
 
-Running the application with given numeric N input:
+Running the application with given numeric N=20 as input:
 yarn start 20
   
 
