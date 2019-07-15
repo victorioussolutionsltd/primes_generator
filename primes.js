@@ -16,3 +16,7 @@ export const isPrime = (number) => {
 
     return true;
 }
+
+export const getExtendedEratosthenesArrayForRangeUnder = (n) => {
+    return [];
+}

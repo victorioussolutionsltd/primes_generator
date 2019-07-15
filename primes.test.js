@@ -1,4 +1,4 @@
-import { isPrime } from './primes';
+import { isPrime, getExtendedEratosthenesArrayForRangeUnder } from './primes';
 
 
 describe('Validation for they array of numbers', ()=>{
@@ -27,4 +27,33 @@ describe('Checking whether function detects non-prime number', ()=>{
         })
     })
 
+})
+
+describe('Creating extended Eratosthenes array with first element (number 1) marked as true', ()=>{
+    it('Shall return an indexed array of n-1 when n given with false values for relevant index if it is a multiple of prime number', ()=>{
+        const modifiedArray = getExtendedEratosthenesArrayForRangeUnder(18);
+        
+        const expectedArray = [ true, //0
+                                true, //1
+                                true, //2
+                                true, //3
+                                false,//4
+                                true, //5
+                                false,//6
+                                true, //7
+                                false,//8
+                                false,//9
+                                false,//10
+                                true,//11
+                                false,//12
+                                true,//13
+                                false,//14
+                                false,//15
+                                false,//16
+                                true//17
+        ];
+        
+        expect(modifiedArray).toEqual(expectedArray);
+        
+    })
 })
