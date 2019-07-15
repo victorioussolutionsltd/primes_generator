@@ -64,3 +64,12 @@ describe('Get primes up to', () => {
         expect(arrayOfPrimeNumbersUnderLimit(18)).toEqual(expectedPrimes);
     })
 })
+
+describe('Getting prime numbers within the range 0 to 1000', () => {
+    it('Shall return an array of prime numbers', () => {
+        const primeNumbers = arrayOfPrimeNumbersUnderLimit(1000);
+        primeNumbers.forEach( item => {
+            expect(isPrime(item)).toBe(true);
+        })
+    })
+})
