@@ -70,3 +70,15 @@ export const multiplicationTable = n => {
 
   return multipliedPrimeNumbers;
 };
+
+export const getStringPrimeMultiplicationTableFromArrays = arrays => {
+    if (arrays === null) {
+        return null;
+      }
+
+      let gridTable = "";
+
+
+
+      return gridTable;
+}
